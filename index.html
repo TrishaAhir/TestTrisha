@@ -115,5 +115,13 @@
       };
       document.body.appendChild(script);
     </script>
+    <script>
+  if (typeof WebAssembly.instantiateStreaming === "function") {
+    console.log("WebAssembly streaming supported");
+  } else {
+    console.log("WebAssembly streaming not supported. Trying to load WebAssembly via fallback.");
+  }
+</script>
+
   </body>
 </html>
